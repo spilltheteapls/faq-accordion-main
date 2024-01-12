@@ -1,0 +1,142 @@
+
+html {
+    font-family: 'Work Sans', sans-serif !important;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 90%;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(275, 100%, 97%);
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: auto;
+}
+
+#container {
+    border-radius: 10px;
+    padding: 1em;
+    background-color: white;
+    margin: 1em;
+    box-shadow: 1px 1px 31px 1px rgba(0,0,0,0.51);
+}
+
+
+.faq-title {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color:hsl(292, 42%, 14%);
+}
+
+.faq-title img {
+    max-width: 1.5rem;
+    max-height: 1.5rem;
+    margin-right: 1rem;
+}
+
+.faq-list {
+    display: grid;
+    gap: 12px;
+}
+
+.faq-list > div {
+    border-bottom: 1px solid hsl(275, 100%, 97%);
+}
+
+.faq-list > div:last-child {
+    border-bottom: none;
+}
+
+.accordion {
+    font-family: 'Work Sans', sans-serif !important;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    transition: 0.4s;
+    font-weight: 700;
+    background-color: white;
+    border: none;
+    color: hsl(292, 42%, 14%); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.accordion:hover {
+    color: #ae2cf1;
+}
+
+.accordion::after {
+    content: url(./assets/images/icon-plus.svg);
+    float: inline-end;
+    color: hsl(275, 100%, 97%);
+}
+
+.active::after {
+    content: url(./assets/images/icon-minus.svg);
+}
+
+.paragraph {
+    font-weight: 400;
+    padding: 10px;
+    background-color: white;
+    color: hsl(292, 16%, 49%);
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-size: 12px; /* like here */
+}
+
+p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+footer {
+    padding-bottom: 10px;
+    position: fixed;
+    bottom: 0;
+}
+
+.attribution {
+    font-size: 11px; text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 425px) {
+
+    body {
+        background-size: contain;
+        background-position: top;
+    }
+
+    #container {
+        max-width: 400px;
+        margin: 0;
+    }
+
+    .accordion {
+        font-size: 16px;
+    }
+
+    .paragraph {
+        font-size: 14px;
+    }
+
+}
